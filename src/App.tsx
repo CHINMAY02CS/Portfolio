@@ -1,13 +1,9 @@
-import Buttons from "@/components/elements/Buttons";
-import TabsDemo from "@/components/elements/Tabs";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import MyRoutes from "./MyRoutes";
 
 function App() {
-  return (
-    <>
-      {/* <Buttons /> */}
-      <TabsDemo />
-    </>
-  );
+  const router = createBrowserRouter([MyRoutes()]);
+  return <RouterProvider router={router} />;
 }
 
 export default App;
