@@ -1,12 +1,12 @@
 import { Suspense } from "react";
-import { Outlet } from "react-router-dom";
+// import { Outlet } from "react-router-dom";
 
 export default function MyRoutes() {
   return {
     path: "/",
     element: (
       <Suspense fallback={<h2>Loading . . .</h2>}>
-        <Outlet />
+        <Layout />
       </Suspense>
     ),
     children: [
@@ -17,6 +17,7 @@ export default function MyRoutes() {
 
 import { useRouteError } from "react-router-dom";
 import Dashboard from "./pages/Dashboard";
+import Layout from "./components/templates/Layout";
 const ErrorBoundary = () => {
   const error = useRouteError() as { message?: string };
   return (

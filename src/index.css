@@ -6,7 +6,7 @@
   :root {
     /* Default background color of <body />...etc */
     --background: 0 0% 100%; /* hsl(0 0% 100%) */
-    --foreground: 0 0% 4%; /* hsl(0 0% 4%) */
+    --foreground: 0 0% 10%; /* hsL(10 0% 10%) */
 
     /* Background color for <Card /> */
     --card: 0 0% 100%; /* hsl(0 0% 100%) */

@@ -26,8 +26,18 @@ module.exports = {
       white: "#ffffff",
       black: "#040404",
       primary: "#1F499F",
-      blue: { DEFAULT: "#1F499F", 50: "#EBF0FC", 100: "#E9EFFF", 300: "#ADC8FF" },
-      orange: { DEFAULT: "#F69F00", 50: "#FFF5EF", 100: "#FFCE85", dark: "#F59300" },
+      blue: {
+        DEFAULT: "#1F499F",
+        50: "#EBF0FC",
+        100: "#E9EFFF",
+        300: "#ADC8FF",
+      },
+      orange: {
+        DEFAULT: "#F69F00",
+        50: "#FFF5EF",
+        100: "#FFCE85",
+        dark: "#F59300",
+      },
       red: "#DD1717",
       green: "#007A48",
       purple: "#6840C4",
@@ -49,6 +59,10 @@ module.exports = {
         auth: "url('/background.jpg')",
       },
       colors: {
+        red: {
+          DEFAULT: "#DD1717",
+          400: "#FE8277",
+        },
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
