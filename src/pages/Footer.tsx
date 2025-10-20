@@ -1,3 +1,5 @@
+import { useNavigate } from "react-router-dom";
+
 export default function Footer() {
   return (
     <div className="bg-orange-50 md:px-16 px-4 font-poppins lg:px-[168px] md:py-24 gap-20">
@@ -15,7 +17,12 @@ export default function Footer() {
             <span className="text-xl font-medium">View Resume</span>
           </div>
         </div>
-        <div className="bg-black border-[4px] border-black rounded-lg h-15 w-52 cursor-pointer">
+        <div
+          className="bg-black border-[4px] border-black rounded-lg h-15 w-52 cursor-pointer"
+          onClick={() =>
+            window.open("https://www.linkedin.com/in/chinmaycs/", "_blank")
+          }
+        >
           <div className="relative flex items-center px-8 bg-orange-100 border border-black rounded-lg h-14 w-52 hover:bg-orange right-2 bottom-1 bg">
             <span className="text-xl font-medium">LinkedIn Profile</span>
           </div>
