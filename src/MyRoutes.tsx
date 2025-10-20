@@ -10,13 +10,13 @@ export default function MyRoutes() {
       </Suspense>
     ),
     children: [
-      { path: "", element: <Dashboard />, errorElement: <ErrorBoundary /> },
+      { path: "", element: <Portfolio />, errorElement: <ErrorBoundary /> },
     ],
   };
 }
 
 import { useRouteError } from "react-router-dom";
-import Dashboard from "./pages/Dashboard";
+import Portfolio from "./pages/Portfolio";
 import Layout from "./components/templates/Layout";
 const ErrorBoundary = () => {
   const error = useRouteError() as { message?: string };
