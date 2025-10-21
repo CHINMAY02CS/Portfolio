@@ -7,7 +7,6 @@ export default function Greeting() {
           <p className="mt-2 text-2xl font-extrabold md:text-3xl lg:text-5xl">
             I'm Chinmay Singh
           </p>
-          {/* <p className="mt-2">I work as a Frontend Developer ( SDE I ).</p> */}
           <div className="grid opacity-90 gap-y-8">
             <div className="grid gap-6 mt-4 text-xl font-normal leading-normal text-black opacity-85">
               <p className="leading-relaxed">
