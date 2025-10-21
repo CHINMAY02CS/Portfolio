@@ -51,234 +51,147 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
+import { cn } from "@/lib/utils";
 
 export default function FeaturedProjects() {
   return (
     <>
-      <div className="md:px-16 px-4 lg:px-[168px] lg:py-24 mx-auto">
-        <p className="mt-2 text-5xl font-extrabold text-center">
+      <div className="md:px-16 px-4 lg:px-[168px] lg:py-24 py-8 md:py-16 mx-auto">
+        <p className="mt-2 text-3xl font-extrabold text-center md:text-4xl lg:text-5xl">
           Featured Projects
         </p>
-        <div className="flex flex-row items-center mt-20 mb-52 gap-14 md:grid-cols-2">
-          <img src={ADMIN} alt="" className="rounded-xl h-76 w-136" />
-          <div className="flex flex-col max-w-lg gap-4 text-base font-light leading-relaxed">
-            <img src={SHIPLOGO} alt="" className="w-40 h-6" />
-            <p className="text-3xl font-medium">
-              Admin Panel for Vendor & Franchise Revamp
-            </p>
-            <p className="text-lg">
-              Rebuilt the legacy admin panel from PHP to React, improving
+
+        <ProjectDescription
+          projectImg={ADMIN}
+          heading="Admin Panel for Vendor & Franchise Revamp"
+          description="Rebuilt the legacy admin panel from PHP to React, improving
               performance, scalability, and developer efficiency. Implemented a
               modular component structure, API integration, and role-based
               access, enabling smoother management of vendors and franchise
-              operations.
-            </p>
-            <p className="text-gray-700 w-fit">Coming Soon . . .</p>
-          </div>
-        </div>
-        <div className="flex flex-row items-center mt-20 mb-52 gap-14 md:grid-cols-2">
-          <div className="flex flex-col max-w-lg gap-4 text-base font-light leading-relaxed">
-            <img src={SHIPLOGO} alt="" className="w-40 h-6" />
-            <p className="text-3xl font-medium">
-              Redesign of ShipGlobal Portal for e-commerce exporters
-            </p>
-            <p className="text-lg">
-              Led the frontend revamp of ShipGlobal’s vendor portal, enhancing
+              operations."
+        />
+        <ProjectDescription
+          reverse
+          projectImg={VENDOR}
+          heading="Redesign of ShipGlobal Portal for e-commerce exporters"
+          view
+          description="Led the frontend revamp of ShipGlobal’s vendor portal, enhancing
               usability and performance across key business modules that
               resulted in a 60% reduction in support tickets, demonstrating a
               significant improvement in vendor satisfaction and operational
-              cost savings.
-            </p>
-            <Dialog>
-              <DialogTrigger>
-                <p className="font-medium underline cursor-pointer hover:text-xl w-fit">
-                  View
-                </p>
-              </DialogTrigger>
-              <DialogContent className="max-w-4xl overflow-auto max-h-[90dvh] leading-relaxed font-poppins">
-                <DialogHeader>
-                  <DialogTitle className="my-4 text-4xl">
-                    Redesign of ShipGlobal Portal for e-commerce exporters
-                  </DialogTitle>
-                  <DialogDescription className="hidden" />
-                </DialogHeader>
-                <p>
-                  This project involved designing and developing a comprehensive
-                  Software as a Service (SaaS) vendor panel for ShipGlobal.in,
-                  an international shipping platform. The objective was to
-                  provide e-commerce merchants with a streamlined, all-in-one
-                  system to manage global logistics, from calculating rates and
-                  processing orders to handling financial transactions and
-                  mandated export compliance.
-                </p>
-                <div className="grid gap-4 p-4 border rounded-2xl">
-                  <p className="my-2 text-xl font-medium text-black">
-                    Rate Calculation & Service Selection
-                  </p>
-                  <img src={RATECALC} alt="" className="m-4 rounded-xl" />
-                  <p className="mt-2">
-                    This module allows users to determine shipping costs
-                    instantly by inputting Destination Country, Pincode, Dead
-                    Weight, and package Dimensions (L x W x H). The system
-                    features intelligent weight handling by automatically
-                    calculating Volumetric Weight and assigning the Billed
-                    Weight as the higher of the Dead Weight or Volumetric
-                    Weight, in line with industry standards. It then presents
-                    multiple service options from different Courier Partners
-                    with corresponding Shipment Rates and Estimated Delivery
-                    Times for easy comparison.
-                  </p>
-                </div>
-                <div className="grid gap-4 p-4 border rounded-2xl">
-                  <p className="my-2 text-xl font-medium text-black">
-                    Order Management (Orders & Multi Box)
-                  </p>
-                  <div className="grid gap-2 m-4 rounded-xl">
-                    <img src={VIEWORDER} alt="" />
-                    <img src={ADDMULTIBOX} alt="" />
-                    <img src={ADDORDER} alt="" />
-                    <img src={VIEWMULTIBOX} alt="" />
-                    <img src={ORDERLIST} alt="" />
-                  </div>
-                  <p className="mt-2">
-                    The platform provides a comprehensive view for tracking
-                    individual shipments, whether it's a Single Order View or a
-                    complex Multi Box Handling order. The views include granular
-                    details such as Pickup Address, Delivery Address, full cost
-                    Summary (Logistic Fee, GST), and detailed Billed Details
-                    (Product Name, SKU, HSN). Orders are managed through a full
-                    lifecycle of status tracking, including Drafts, Ready,
-                    Packed, Manifested, Dispatched, Processed, and Cancelled.
-                  </p>
-                </div>
-                <div className="grid gap-4 p-4 border rounded-2xl">
-                  <p className="my-2 text-xl font-medium text-black">
-                    Logistics Workflow (Manifest & Pickup)
-                  </p>
-                  <div className="grid gap-2 m-4 rounded-xl">
-                    <img src={MANIFESTLIST} alt="" />
-                    <img src={VIEWMANIFEST} alt="" />
-                    <img src={PICKUPLIST} alt="" />
-                    <img src={VIEWPICKUP} alt="" />
-                  </div>
-                  <p className="mt-2">
-                    These tools are designed to streamline the handover of
-                    packages to the carrier. The Manifest Creation function
-                    enables merchants to group multiple orders (based on same or
-                    other addresses) into a single Manifest Code for bulk
-                    processing. Separately, the Pickup Requests module tracks
-                    all scheduled pickups, linking the Pickup Code directly to
-                    the orders and the associated Manifest Code, detailing the
-                    pickup address, total weight, and status (Open/Picked).
-                  </p>
-                </div>
-                <div className="grid gap-4 p-4 border rounded-2xl">
-                  <p className="my-2 text-xl font-medium text-black">
-                    Financial Management (Wallet & Documents)
-                  </p>
-                  <div className="grid gap-2 m-4 rounded-xl">
-                    <img src={WALLETTABS} alt="" />
-                    <img src={RECHARGE} alt="" />
-                    <img src={DOCS} alt="" />
-                  </div>
-                  <p className="mt-2">
-                    The system ensures complete financial transparency and
-                    control. The Wallet module displays the real-time balance
-                    and facilitates instant Recharge while keeping a detailed
-                    ledger of all financial movements in the Transaction History
-                    (including wallet deductions and claims). The Documents
-                    module provides easy access to all generated invoices (e.g.,
-                    SGINV2528CRZC) with relevant accounting details.
-                  </p>
-                </div>
-                <div className="grid gap-4 p-4 border rounded-2xl">
-                  <p className="my-2 text-xl font-medium text-black">
-                    Compliance and Settings
-                  </p>
-                  <div className="grid gap-2 m-4 rounded-xl">
-                    <img src={PROFILE} alt="" />
-                    <img src={PICKUPADDRESS} alt="" />
-                    <img src={TYPEKYC} alt="" />
-                    <img src={KYCPAGE} alt="" />
-                    <img src={KYCDETAILS} alt="" />
-                  </div>
-                  <p className="mt-2">
-                    This is a critical feature for international trade, managing
-                    both account and regulatory requirements. Profile Management
-                    allows users to update basic contact details and manage
-                    their pickup address. The KYC and Regulatory Compliance
-                    section ensures necessary export adherence by facilitating
-                    the submission and verification of Business KYC documents
-                    (Aadhar, GST, PAN, Signature) and country-specific customs
-                    documents like the IEC Number and ADCODE.
-                  </p>
-                </div>
-                <div className="grid gap-4 p-4 border rounded-2xl">
-                  <p className="my-2 text-xl font-medium text-black">
-                    E-commerce Integrations
-                  </p>
-                  <div className="grid gap-2 m-4 rounded-xl">
-                    <img src={INTEGRATIONS} alt="" />
-                    <img src={ADDINTEGRATION} alt="" />
-                  </div>
-                  <p className="mt-2">
-                    The platform ensures a seamless flow of data from
-                    storefronts. The Channel List provides pre-built, one-click
-                    connections with major e-commerce platforms like Shopify and
-                    Walmart to enable orders to be automatically fetched,
-                    eliminating manual entry and ensuring data accuracy.
-                  </p>
-                </div>
-              </DialogContent>
-            </Dialog>
-          </div>
-          <img src={VENDOR} alt="" className="h-76 w-136" />
-        </div>
-        <div className="flex flex-row items-center mt-52 mb-36 gap-14 md:grid-cols-2">
-          <img src={FRANCHISE} alt="" className="h-76 w-136" />
-          <div className="flex flex-col max-w-lg gap-4 text-base font-light leading-relaxed">
-            <img src={SHIPLOGO} alt="" className="w-40 h-6" />
-            <p className="text-3xl font-medium">
-              Franchise Model for Cross-Border Shipping
-            </p>
-            <p className="text-lg">
-              This model targets local entrepreneurs (Franchise Partners) to
+              cost savings."
+          innerDescription=" This project involved designing and developing a comprehensive
+                Software as a Service (SaaS) vendor panel for ShipGlobal.in, an
+                international shipping platform. The objective was to provide
+                e-commerce merchants with a streamlined, all-in-one system to
+                manage global logistics, from calculating rates and processing
+                orders to handling financial transactions and mandated export
+                compliance."
+          innerContent={
+            <>
+              <ImageCard
+                heading="Rate Calculation & Service Selection"
+                images={[RATECALC]}
+                description="This module allows users to determine shipping costs instantly
+                  by inputting Destination Country, Pincode, Dead Weight, and
+                  package Dimensions (L x W x H). The system features
+                  intelligent weight handling by automatically calculating
+                  Volumetric Weight and assigning the Billed Weight as the
+                  higher of the Dead Weight or Volumetric Weight, in line with
+                  industry standards. It then presents multiple service options
+                  from different Courier Partners with corresponding Shipment
+                  Rates and Estimated Delivery Times for easy comparison."
+              />
+              <ImageCard
+                heading="Order Management (Orders & Multi Box)"
+                images={[
+                  VIEWORDER,
+                  ADDMULTIBOX,
+                  ADDORDER,
+                  VIEWMULTIBOX,
+                  ORDERLIST,
+                ]}
+                description="The platform provides a comprehensive view for tracking
+                  individual shipments, whether it's a Single Order View or a
+                  complex Multi Box Handling order. The views include granular
+                  details such as Pickup Address, Delivery Address, full cost
+                  Summary (Logistic Fee, GST), and detailed Billed Details
+                  (Product Name, SKU, HSN). Orders are managed through a full
+                  lifecycle of status tracking, including Drafts, Ready, Packed,
+                  Manifested, Dispatched, Processed, and Cancelled."
+              />
+              <ImageCard
+                heading="Logistics Workflow (Manifest & Pickup)"
+                images={[MANIFESTLIST, VIEWMANIFEST, PICKUPLIST, VIEWPICKUP]}
+                description="These tools are designed to streamline the handover of
+                  packages to the carrier. The Manifest Creation function
+                  enables merchants to group multiple orders (based on same or
+                  other addresses) into a single Manifest Code for bulk
+                  processing. Separately, the Pickup Requests module tracks all
+                  scheduled pickups, linking the Pickup Code directly to the
+                  orders and the associated Manifest Code, detailing the pickup
+                  address, total weight, and status (Open/Picked)."
+              />
+              <ImageCard
+                heading="Financial Management (Wallet & Documents)"
+                images={[WALLETTABS, RECHARGE, PICKUPLIST, DOCS]}
+                description="The system ensures complete financial transparency and
+                  control. The Wallet module displays the real-time balance and
+                  facilitates instant Recharge while keeping a detailed ledger
+                  of all financial movements in the Transaction History
+                  (including wallet deductions and claims). The Documents module
+                  provides easy access to all generated invoices (e.g.,
+                  SGINV2528CRZC) with relevant accounting details."
+              />
+              <ImageCard
+                heading="Compliance and Settings"
+                images={[PROFILE, PICKUPADDRESS, TYPEKYC, KYCPAGE, KYCDETAILS]}
+                description="This is a critical feature for international trade, managing
+                  both account and regulatory requirements. Profile Management
+                  allows users to update basic contact details and manage their
+                  pickup address. The KYC and Regulatory Compliance section
+                  ensures necessary export adherence by facilitating the
+                  submission and verification of Business KYC documents (Aadhar,
+                  GST, PAN, Signature) and country-specific customs documents
+                  like the IEC Number and ADCODE."
+              />
+              <ImageCard
+                heading="E-commerce Integrations"
+                images={[INTEGRATIONS, ADDINTEGRATION]}
+                description="The platform ensures a seamless flow of data from storefronts.
+                  The Channel List provides pre-built, one-click connections
+                  with major e-commerce platforms like Shopify and Walmart to
+                  enable orders to be automatically fetched, eliminating manual
+                  entry and ensuring data accuracy."
+              />
+            </>
+          }
+        />
+
+        <ProjectDescription
+          projectImg={FRANCHISE}
+          heading="Franchise Model for Cross-Border Shipping"
+          view
+          description="This model targets local entrepreneurs (Franchise Partners) to
               establish and manage the crucial first-mile logistics for
               cross-border e-commerce, offering a tech-first, low-investment
               alternative to traditional logistics franchises. The platform
               equips partners with a dedicated system to manage regional
               pickups, ensure compliance adherence, and grow their local
-              logistics business.
-            </p>
-            <Dialog>
-              <DialogTrigger>
-                <p className="font-medium underline cursor-pointer hover:text-xl w-fit">
-                  View
-                </p>
-              </DialogTrigger>
-              <DialogContent className="max-w-4xl overflow-auto max-h-[90dvh] leading-relaxed font-poppins">
-                <DialogHeader>
-                  <DialogTitle className="my-4 text-4xl">
-                    Franchise Model for Cross-Border Shipping
-                  </DialogTitle>
-                  <DialogDescription className="hidden" />
-                </DialogHeader>
-                <p>
-                  This project involved designing and developing a comprehensive
+              logistics business."
+          innerDescription="This project involved designing and developing a comprehensive
                   Software as a Service (SaaS) vendor panel for ShipGlobal.in,
                   an international shipping platform. The objective was to
                   provide e-commerce merchants with a streamlined, all-in-one
                   system to manage global logistics, from calculating rates and
                   processing orders to handling financial transactions and
-                  mandated export compliance.
-                </p>
-                <div className="grid gap-4 p-4 border rounded-2xl">
-                  <p className="my-2 text-xl font-medium text-black">
-                    Dashboard and Operational Overview
-                  </p>
-                  <img src={DASHBOARDFR} alt="" className="m-4 rounded-xl" />
-                  <p className="mt-2">
-                    The central Dashboard provides an immediate, high-level
+                  mandated export compliance."
+          innerContent={
+            <>
+              <ImageCard
+                heading="Dashboard and Operational Overview"
+                images={[DASHBOARDFR]}
+                description="The central Dashboard provides an immediate, high-level
                     snapshot of all operational activities, designed to help
                     merchants prioritize tasks. Key metrics include the status
                     and count of all orders: All Orders, Drafted Orders, Pending
@@ -289,16 +202,12 @@ export default function FeaturedProjects() {
                     not overlooked. Additionally, the Wallet Activity panel
                     tracks recent transactions and prompts users to Recharge
                     Wallet if the balance is low, a necessary step to create new
-                    orders.
-                  </p>
-                </div>
-                <div className="grid gap-4 p-4 border rounded-2xl">
-                  <p className="my-2 text-xl font-medium text-black">
-                    Rate Calculation & Service Selection
-                  </p>
-                  <img src={RATECALCFR} alt="" className="m-4 rounded-xl" />
-                  <p className="mt-2">
-                    This module allows users to determine shipping costs
+                    orders."
+              />
+              <ImageCard
+                heading="Rate Calculation & Service Selection"
+                images={[RATECALCFR]}
+                description="This module allows users to determine shipping costs
                     instantly by inputting Destination Country, Pincode, Dead
                     Weight, and package Dimensions (L x W x H). The system
                     features intelligent weight handling by automatically
@@ -307,22 +216,18 @@ export default function FeaturedProjects() {
                     Weight, in line with industry standards. It then presents
                     multiple service options from different Courier Partners
                     with corresponding Shipment Rates and Estimated Delivery
-                    Times for easy comparison.
-                  </p>
-                </div>
-                <div className="grid gap-4 p-4 border rounded-2xl">
-                  <p className="my-2 text-xl font-medium text-black">
-                    Order Management (Orders & Multi Box)
-                  </p>
-                  <div className="grid gap-2 m-4 rounded-xl">
-                    <img src={ORDERLISTFR} alt="" />
-                    <img src={MULTIBOXLISTFR} alt="" />
-                    <img src={ADDORDERFR} alt="" />
-                    <img src={ADDMULTIBOXFR} alt="" />
-                    <img src={VIEWORDER} alt="" />
-                  </div>
-                  <p className="mt-2">
-                    The platform offers detailed management for both standard
+                    Times for easy comparison."
+              />
+              <ImageCard
+                heading="Order Management (Orders & Multi Box)"
+                images={[
+                  ORDERLISTFR,
+                  MULTIBOXLISTFR,
+                  ADDORDERFR,
+                  ADDMULTIBOXFR,
+                  VIEWORDER,
+                ]}
+                description="The platform offers detailed management for both standard
                     and complex shipments. The main Orders list provides a
                     filterable view of all shipments, showing Order ID, Customer
                     Details, Order Date, Package Details, and Status. For
@@ -333,62 +238,41 @@ export default function FeaturedProjects() {
                     For complex shipments, the Multi Box module is available to
                     manage and list orders comprising multiple packages under a
                     single Master Order ID, where users can define the weight,
-                    dimensions, and product details for each separate box.
-                  </p>
-                </div>
-                <div className="grid gap-4 p-4 border rounded-2xl">
-                  <p className="my-2 text-xl font-medium text-black">
-                    Logistics Workflow (Manifest & Pickup)
-                  </p>
-                  <div className="grid gap-2 m-4 rounded-xl">
-                    <img src={MANIFESTLISTFR} alt="" />
-                    <img src={ADDMANIFESTFR} alt="" />
-                    <img src={PICKUPLISTFR} alt="" />
-                    <img src={ADDPICKUPFR} alt="" />
-                    <img src={VIEWPICKUPFR} alt="" />
-                  </div>
-                  <p className="mt-2">
-                    These tools are designed to streamline the handover of
+                    dimensions, and product details for each separate box."
+              />
+              <ImageCard
+                heading="Logistics Workflow (Manifest & Pickup)"
+                images={[
+                  MANIFESTLISTFR,
+                  ADDMANIFESTFR,
+                  PICKUPLISTFR,
+                  ADDPICKUPFR,
+                  VIEWPICKUPFR,
+                ]}
+                description="These tools are designed to streamline the handover of
                     packages to the carrier. The Manifest Creation function
                     enables merchants to group multiple orders (based on same or
                     other addresses) into a single Manifest Code for bulk
                     processing. Separately, the Pickup Requests module tracks
                     all scheduled pickups, linking the Pickup Code directly to
                     the orders and the associated Manifest Code, detailing the
-                    pickup address, total weight, and status (Open/Picked).
-                  </p>
-                </div>
-                <div className="grid gap-4 p-4 border rounded-2xl">
-                  <p className="my-2 text-xl font-medium text-black">
-                    Financial Management (Wallet & Documents)
-                  </p>
-                  <div className="grid gap-2 m-4 rounded-xl">
-                    <img src={WALLETLISTFR} alt="" />
-                    <img src={WALLETDETAILFR} alt="" />
-                    <img src={RECHARGEFR} alt="" />
-                  </div>
-                  <p className="mt-2">
-                    The system ensures complete financial transparency and
+                    pickup address, total weight, and status (Open/Picked)."
+              />
+              <ImageCard
+                heading="Financial Management (Wallet & Documents)"
+                images={[WALLETLISTFR, WALLETDETAILFR, RECHARGEFR]}
+                description="The system ensures complete financial transparency and
                     control. The Wallet module displays the real-time balance
                     and facilitates instant Recharge while keeping a detailed
                     ledger of all financial movements in the Transaction History
                     (including wallet deductions and claims). The Documents
                     module provides easy access to all generated invoices (e.g.,
-                    SGINV2528CRZC) with relevant accounting details.
-                  </p>
-                </div>
-                <div className="grid gap-4 p-4 border rounded-2xl">
-                  <p className="my-2 text-xl font-medium text-black">
-                    Compliance, Profile, and Customer Management
-                  </p>
-                  <div className="grid gap-2 m-4 rounded-xl">
-                    <img src={PROFILEFR} alt="" />
-                    <img src={KYCFR} alt="" />
-                    <img src={CUSTOMERFR} alt="" />
-                    <img src={ADDCUSTOMERFR} alt="" />
-                  </div>
-                  <p className="mt-2">
-                    This section manages user profile, compliance, and recipient
+                    SGINV2528CRZC) with relevant accounting details."
+              />
+              <ImageCard
+                heading=" Compliance, Profile, and Customer Management"
+                images={[PROFILEFR, KYCFR, CUSTOMERFR, ADDCUSTOMERFR]}
+                description="This section manages user profile, compliance, and recipient
                     data. The Profile area displays personal and business
                     information, including Billing Address and Pickup Address.
                     The KYC (Know Your Customer) section is critical for
@@ -399,14 +283,99 @@ export default function FeaturedProjects() {
                     the management of the merchant's recipient database,
                     including the ability to Add New Customer with comprehensive
                     contact and address details, ensuring all shipping labels
-                    are generated accurately.
-                  </p>
-                </div>
-              </DialogContent>
-            </Dialog>
-          </div>
-        </div>
+                    are generated accurately."
+              />
+            </>
+          }
+        />
       </div>
     </>
+  );
+}
+
+interface ProjectDescriptionProps {
+  heading: string;
+  description: string;
+  view?: boolean;
+  innerDescription?: string;
+  innerContent?: React.ReactNode;
+  projectImg: string;
+  reverse?: boolean;
+}
+
+function ProjectDescription({
+  heading,
+  description,
+  view = false,
+  innerDescription,
+  innerContent,
+  projectImg,
+  reverse = false,
+}: ProjectDescriptionProps) {
+  return (
+    <div className="flex flex-col items-center mt-14 lg:mt-20 mb-36 lg:mb-52 gap-14 lg:grid lg:grid-cols-2">
+      <img
+        src={projectImg}
+        alt=""
+        className={cn("h-76 w-136 hidden", reverse && "lg:flex")}
+      />
+      <div
+        className={cn(
+          "flex flex-col max-w-lg gap-4 text-base font-light leading-relaxed"
+        )}
+      >
+        <img src={SHIPLOGO} alt="" className="w-40 h-6" />
+        <p className="text-xl font-medium md:text-2xl lg:text-3xl">{heading}</p>
+        <p className="text-base md:text-lg">{description}</p>
+        {view ? (
+          <Dialog>
+            <DialogTrigger className="w-fit">
+              <p className="font-medium underline cursor-pointer hover:text-xl w-fit">
+                View
+              </p>
+            </DialogTrigger>
+            <DialogContent className="max-w-4xl overflow-auto max-h-[90dvh] leading-relaxed font-poppins">
+              <DialogHeader>
+                <DialogTitle className="my-4 text-2xl md:text:3xl lg:text-4xl">
+                  {heading}
+                </DialogTitle>
+                <DialogDescription className="hidden" />
+              </DialogHeader>
+              <p>{innerDescription}</p>
+              {innerContent}
+            </DialogContent>
+          </Dialog>
+        ) : (
+          <p className="text-gray-700 w-fit">Coming Soon . . .</p>
+        )}
+      </div>
+      <img
+        src={projectImg}
+        alt=""
+        className={cn("h-76 w-136", reverse && "lg:hidden")}
+      />
+    </div>
+  );
+}
+
+function ImageCard({
+  heading,
+  images,
+  description,
+}: {
+  heading: string;
+  images: string[];
+  description: string;
+}) {
+  return (
+    <div className="grid gap-4 p-4 border rounded-2xl">
+      <p className="my-2 text-xl font-medium text-black">{heading}</p>
+      <div className="grid gap-2 m-4 rounded-xl">
+        {images.map((src, index) => (
+          <img key={index} src={src} alt="" />
+        ))}
+      </div>
+      <p className="mt-2">{description}</p>
+    </div>
   );
 }
