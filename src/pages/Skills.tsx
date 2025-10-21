@@ -37,7 +37,7 @@ function CardOneImage() {
   return (
     <div className="bg-black border-[4px] border-black rounded-lg h-16 w-24">
       <div className="relative flex items-center h-16 pl-2 bg-red-400 border border-black rounded-lg w-24 right-1.5 bottom-1.5 bg">
-        <img src={ONE} alt="" className="w-20 h-12" />
+        <img src={ONE} alt="" loading="lazy" className="w-20 h-12" />
       </div>
     </div>
   );
@@ -46,7 +46,7 @@ function CardTwoImage() {
   return (
     <div className="bg-black border-[4px] border-black rounded-lg h-16 w-24">
       <div className="relative flex items-center h-16 bg-green-400 border border-black rounded-lg w-24 right-1.5 bottom-1.5 bg">
-        <img src={TWO} alt="" className="w-16 h-12 mx-auto" />
+        <img src={TWO} alt="" loading="lazy" className="w-16 h-12 mx-auto" />
       </div>
     </div>
   );
@@ -55,7 +55,7 @@ function CardThreeImage() {
   return (
     <div className="bg-black border-[4px] border-black rounded-lg h-16 w-24">
       <div className="relative flex items-center h-16 bg-purple-400 border border-black rounded-lg w-24 right-1.5 bottom-1.5 bg">
-        <img src={THREE} alt="" className="w-16 h-12 mx-auto" />
+        <img src={THREE} alt="" loading="lazy" className="w-16 h-12 mx-auto" />
       </div>
     </div>
   );
@@ -79,7 +79,7 @@ function SkillCard({
       <div className="-mt-4 bg-black border-[4px] border-black shadow-lg rounded-3xl h-112 w-76 cursor-pointer">
         <div className="relative flex flex-col gap-4 p-8 px-6 bg-white border border-black rounded-3xl h-112 right-2.5 bottom-2 w-76 bg">
           {img}
-          <p className="text-xl md:text-2xl">{title}</p>
+          <p className="text-lg md:text-2xl">{title}</p>
           <p className="text-sm font-normal leading-relaxed">
             {descriptionOne}
           </p>

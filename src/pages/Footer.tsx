@@ -6,7 +6,7 @@ export default function Footer() {
       <p className="mb-10 text-4xl font-extrabold text-center md:mb-16 md:text-6xl lg:text-8xl opacity-90">
         Lets Work Together
       </p>
-      <p className="mx-auto text-xl leading-relaxed text-center md:text-2xl max-w-160">
+      <p className="mx-auto text-lg leading-relaxed text-center md:text-2xl max-w-160">
         If you’re looking to build reliable, performant, and visually polished
         web applications — I’d love to collaborate.
       </p>
@@ -42,18 +42,20 @@ export function NavigateButton({
   return (
     <div
       className={cn(
-        "bg-black border-[4px] border-black rounded-lg h-15 w-48 cursor-pointer",
+        "bg-black border-[4px] border-black rounded-lg h-10 lg:h-15 w-40 lg:w-48 cursor-pointer",
         parentClassName
       )}
       onClick={() => window.open(url, "_blank")}
     >
       <div
         className={cn(
-          "relative flex items-center w-48 px-8 border border-black rounded-lg h-14 bg-orange-50 hover:bg-orange right-2 bottom-1 bg",
+          "relative flex items-center w-40 lg:w-48 border border-black rounded-lg h-9 lg:h-14 bg-orange-50 hover:bg-orange right-2 bottom-1 bg",
           className
         )}
       >
-        <span className="text-lg font-medium md:text-xl">{label}</span>
+        <span className="w-full text-base font-medium text-center md:text-xl">
+          {label}
+        </span>
       </div>
     </div>
   );

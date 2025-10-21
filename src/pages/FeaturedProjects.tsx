@@ -321,11 +321,16 @@ function ProjectDescription({
       />
       <div
         className={cn(
-          "flex flex-col max-w-lg gap-4 text-base font-light leading-relaxed"
+          "flex flex-col max-w-lg gap-4 text-base font-light leading-relaxed px-4"
         )}
       >
-        <img src={SHIPLOGO} alt="" className="w-40 h-6" />
-        <p className="text-xl font-medium md:text-2xl lg:text-3xl">{heading}</p>
+        <img
+          src={SHIPLOGO}
+          loading="lazy"
+          alt=""
+          className="w-24 h-4 lg:w-40 lg:h-6"
+        />
+        <p className="text-lg font-medium md:text-2xl lg:text-3xl">{heading}</p>
         <p className="text-base md:text-lg">{description}</p>
         {view ? (
           <Dialog>
