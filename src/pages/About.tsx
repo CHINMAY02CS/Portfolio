@@ -4,7 +4,7 @@ import { ReactNode } from "react";
 export default function About() {
   return (
     <>
-      <div className="md:px-16 px-4 lg:px-[168px] py-8 lg:py-16 mx-auto">
+      <div className="md:px-16 px-8 lg:px-[168px] py-8 lg:py-16 mx-auto">
         <p className="mb-8 text-lg text-center md:text-xl text-cyan-400">
           Nice to meet you
         </p>
