@@ -9,16 +9,14 @@ export default function Skills() {
           <div className="-mt-4 bg-black border-[4px] border-black shadow-lg rounded-3xl h-112 w-76 cursor-pointer">
             <div className="relative flex flex-col gap-4 p-8 px-6 bg-white border border-black rounded-3xl h-112 right-2.5 bottom-2 w-76 bg">
               <CardOneImage />
-              <p className="text-2xl">Product Design for Businesses</p>
+              <p className="text-2xl">Frontend Development</p>
               <p className="text-sm font-normal leading-relaxed">
-                I specialize in effective design for startups. I'll help you
-                brainstorm, research, and run growth experiments to make a real
-                impact on your business
+                I build fast, responsive, and maintainable web applications
+                using React, TypeScript, and modern tooling.
               </p>
               <p className="text-sm font-normal leading-relaxed">
-                I can help you to set up a streamlined design process and create
-                visuals that not only drive growth but also deeply connect with
-                your audience.
+                My focus is on writing clean, modular code that scales
+                effortlessly with growing product requirements.
               </p>
             </div>
           </div>
@@ -27,16 +25,14 @@ export default function Skills() {
           <div className="-mt-4 bg-black border-[4px] border-black shadow-lg rounded-3xl h-112 w-76 cursor-pointer">
             <div className="relative flex flex-col gap-4 p-8 px-6 bg-white border border-black rounded-3xl h-112 right-2.5 bottom-2 w-76 bg">
               <CardTwoImage />
-              <p className="text-2xl">Web & Mobile UI/UX Design</p>
+              <p className="text-2xl">UI Architecture & Performance</p>
               <p className="text-sm font-normal leading-relaxed">
-                I design beautiful and effective mobile apps, websites, and
-                e-commerce stores.
+                I design efficient component structures and optimize rendering
+                for a seamless user experience.
               </p>
               <p className="text-sm font-normal leading-relaxed">
-                I use Figma for app and complex website designs, making
-                developer handoffs seamless. For personal or small business
-                sites, I can also bring your vision to life directly in Webflow
-                or Framer
+                From lazy loading to state management, every decision aims to
+                enhance speed and reliability.
               </p>
             </div>
           </div>
@@ -45,14 +41,14 @@ export default function Skills() {
           <div className="-mt-4 bg-black border-[4px] border-black shadow-lg rounded-3xl h-112 w-76 cursor-pointer">
             <div className="relative flex flex-col gap-4 p-8 px-6 bg-white border border-black rounded-3xl h-112 right-2.5 bottom-2 w-76 bg">
               <CardThreeImage />
-              <p className="text-2xl">Design Services and Motion Design</p>
+              <p className="text-2xl">Collaboration & Code Quality</p>
               <p className="text-sm font-normal leading-relaxed">
-                I help content creators build professional and authentic online
-                presences.
+                I work closely with designers and backend teams to bring ideas
+                to life with precision and consistency.
               </p>
               <p className="text-sm font-normal leading-relaxed">
-                From website design and branding to motion graphics, banners,
-                and thumbnails, I'll ensure your digital identity truly shines.
+                Through mentorship, reviews, and reusable component patterns, I
+                ensure codebases remain robust and future-ready.
               </p>
             </div>
           </div>
