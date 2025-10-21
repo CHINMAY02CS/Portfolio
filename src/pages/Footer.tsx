@@ -1,37 +1,59 @@
+import { cn } from "@/lib/utils";
+
 export default function Footer() {
   return (
-    <div className="bg-orange-50 md:px-16 px-4 font-poppins lg:px-[168px] md:py-24 gap-20">
-      <p className="mb-16 font-extrabold text-center text-8xl opacity-90">
+    <div className="bg-orange-50 md:px-16 px-4 font-poppins lg:px-[168px] py-16 md:py-24 gap-20">
+      <p className="mb-10 text-4xl font-extrabold text-center md:mb-16 md:text-6xl lg:text-8xl opacity-90">
         Lets Work Together
       </p>
-      <p className="mx-auto text-2xl leading-relaxed text-center max-w-160">
+      <p className="mx-auto text-xl leading-relaxed text-center md:text-2xl max-w-160">
         If you’re looking to build reliable, performant, and visually polished
         web applications — I’d love to collaborate.
       </p>
-      <div className="flex items-center justify-center mt-12 gap-x-16">
-        <div
-          className="bg-black border-[4px] border-black rounded-lg h-15 w-48 cursor-pointer"
-          onClick={() =>
-            window.open(
-              "https://drive.google.com/file/d/1-laG-HJgWTzmM7_bqLNtqdte122XGjhd/view?usp=sharing",
-              "_blank"
-            )
-          }
-        >
-          <div className="relative flex items-center w-48 px-8 border border-black rounded-lg h-14 bg-orange-50 hover:bg-orange right-2 bottom-1 bg">
-            <span className="text-xl font-medium">View Resume</span>
-          </div>
-        </div>
-        <div
-          className="bg-black border-[4px] border-black rounded-lg h-15 w-52 cursor-pointer"
-          onClick={() =>
-            window.open("https://www.linkedin.com/in/chinmaycs/", "_blank")
-          }
-        >
-          <div className="relative flex items-center px-8 bg-orange-100 border border-black rounded-lg w-52 h-14 hover:bg-orange right-2 bottom-1 bg">
-            <span className="text-xl font-medium">LinkedIn Profile</span>
-          </div>
-        </div>
+      <div className="flex flex-col items-center justify-center gap-16 mt-12 gap-y-8 md:flex-row">
+        <NavigateButton
+          url="https://drive.google.com/file/d/1-laG-HJgWTzmM7_bqLNtqdte122XGjhd/view?usp=sharing"
+          label="View Resume"
+        />
+        <NavigateButton
+          url="https://www.linkedin.com/in/chinmaycs/"
+          parentClassName="w-52"
+          label=" LinkedIn Profile"
+          className="bg-orange-100 hover:bg-orange w-52"
+        />
+      </div>
+    </div>
+  );
+}
+
+interface NavigateButtonProps {
+  parentClassName?: string;
+  url: string;
+  label: string;
+  className?: string;
+}
+
+function NavigateButton({
+  url,
+  label,
+  className = "",
+  parentClassName = "",
+}: NavigateButtonProps) {
+  return (
+    <div
+      className={cn(
+        "bg-black border-[4px] border-black rounded-lg h-15 w-48 cursor-pointer",
+        parentClassName
+      )}
+      onClick={() => window.open(url, "_blank")}
+    >
+      <div
+        className={cn(
+          "relative flex items-center w-48 px-8 border border-black rounded-lg h-14 bg-orange-50 hover:bg-orange right-2 bottom-1 bg",
+          className
+        )}
+      >
+        <span className="text-lg font-medium md:text-xl">{label}</span>
       </div>
     </div>
   );
