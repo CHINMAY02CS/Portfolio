@@ -1,7 +1,7 @@
 export default function Greeting() {
   return (
     <>
-      <div className="flex items-center min-h-screen">
+      <div className="flex items-center min-h-screen animate-fadeIn">
         <div className="md:px-16 px-8 lg:px-[168px] py-16 lg:py-24 md:max-w-5xl mx-auto">
           <p>Nice to meet you</p>
           <p className="mt-2 text-2xl font-extrabold md:text-3xl lg:text-5xl">

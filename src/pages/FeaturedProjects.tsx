@@ -313,10 +313,11 @@ function ProjectDescription({
   reverse = false,
 }: ProjectDescriptionProps) {
   return (
-    <div className="flex flex-col items-center mt-14 lg:mt-20 mb-36 lg:mb-52 gap-14 lg:grid lg:grid-cols-2">
+    <div className="flex flex-col items-center mt-14 lg:mt-20 mb-36 lg:mb-52 gap-14 lg:grid lg:grid-cols-2 animate-fadeIn">
       <img
         src={projectImg}
         alt=""
+        loading="lazy"
         className={cn("h-76 w-136 hidden", reverse && "lg:flex")}
       />
       <div
@@ -335,7 +336,7 @@ function ProjectDescription({
         {view ? (
           <Dialog>
             <DialogTrigger className="w-fit">
-              <p className="font-medium underline cursor-pointer hover:text-xl w-fit">
+              <p className="font-medium underline cursor-pointer hover:scale-y-110 hover:scale-x-125 hover:text-blue hover:duration-300 w-fit">
                 View
               </p>
             </DialogTrigger>

@@ -8,7 +8,7 @@ export default function About() {
         <p className="mb-8 text-lg text-center md:text-xl text-cyan-400">
           Nice to meet you
         </p>
-        <div className="w-full text-4xl font-extrabold text-center md:text-5xl opacity-90 lg:text-7xl">
+        <div className="w-full text-4xl font-extrabold text-center md:text-5xl opacity-90 lg:text-7xl animate-fadeIn">
           <p className="mt-2">Hi there,</p>
           <p className="mt-4">I'm Chinmay Singh</p>
           <p className="max-w-3xl mx-auto my-16 text-lg font-normal leading-loose text-center md:text-xl lg:text-2xl">
@@ -20,7 +20,8 @@ export default function About() {
         <img
           src={ABOUTIMAGE}
           alt=""
-          className="mx-auto scale-75 scale-x-100 rounded-lg"
+          loading="lazy"
+          className="mx-auto scale-75 scale-x-100 rounded-lg animate-slideIntop"
         />
         <div className="flex flex-col max-w-3xl gap-20 mx-auto">
           <Description
@@ -108,7 +109,7 @@ interface DescriptionProps {
 
 function Description({ category, heading, children }: DescriptionProps) {
   return (
-    <div>
+    <div className="duration-1000 animate-slideInLeft">
       <p className="text-lg text-gray-600 lg:text-xl text">{category}</p>
       <p className="mt-4 text-2xl font-bold leading-snug md:text-4xl lg:text-5xl">
         {heading}

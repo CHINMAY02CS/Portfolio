@@ -155,11 +155,31 @@ module.exports = {
           "0%,70%,100%": { opacity: "1" },
           "20%,50%": { opacity: "0" },
         },
+        fadeIn: {
+          "0%": { opacity: "0", transform: "scale(1.05)" },
+          "100%": { opacity: "1", transform: "scale(1)" },
+        },
+        slideInLeft: {
+          "0%": { opacity: "0", transform: "translateX(-80px)" },
+          "100%": { opacity: "1", transform: "translateX(0)" },
+        },
+        slideIntop: {
+          "0%": { opacity: "0", transform: "translateY(9px)" },
+          "100%": { opacity: "1", transform: "translateY(0)" },
+        },
+        easeIn: {
+          "0%": { opacity: "0", transform: "translateY(30px)" },
+          "100%": { opacity: "1", transform: "translateY(0)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         "caret-blink": "caret-blink 1.25s ease-out infinite",
+        fadeIn: "fadeIn 1.2s ease-out forwards",
+        slideInLeft: "slideInLeft 1s ease-out forwards",
+        slideIntop: "slideIntop 1s ease-out forwards",
+        easeIn: "easeIn 1s ease-out forwards",
       },
     },
   },

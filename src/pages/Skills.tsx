@@ -75,7 +75,7 @@ function SkillCard({
   descriptionOne,
 }: SkillCardProps) {
   return (
-    <div className="font-extrabold opacity-90 text-4xl md:text-[120px] grid gap-y-8">
+    <div className="font-extrabold opacity-90 text-4xl md:text-[120px] grid gap-y-8 animate-easeIn">
       <div className="-mt-4 bg-black border-[4px] border-black shadow-lg rounded-3xl h-112 w-76 cursor-pointer">
         <div className="relative flex flex-col gap-4 p-8 px-6 bg-white border border-black rounded-3xl h-112 right-2.5 bottom-2 w-76 bg">
           {img}
