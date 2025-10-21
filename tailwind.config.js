@@ -71,6 +71,10 @@ module.exports = {
           DEFAULT: "#6840C4",
           400: "#9A64FF",
         },
+        cyan: {
+          DEFAULT: "#00B8D9",
+          400: "#007495",
+        },
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",

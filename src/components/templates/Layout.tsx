@@ -1,5 +1,6 @@
 import { Outlet } from "react-router-dom";
 import Header from "./Header";
+import Footer from "@/pages/Footer";
 
 export default function Layout() {
   return (
@@ -8,6 +9,7 @@ export default function Layout() {
       <div className="mt-15 font-poppins">
         <Outlet />
       </div>
+      <Footer />
     </>
   );
 }
