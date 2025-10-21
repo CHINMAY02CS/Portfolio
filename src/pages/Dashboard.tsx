@@ -1,10 +1,11 @@
 import HERO from "@/assets/Hero.png";
+import { NavigateButton } from "./Footer";
 
 export default function Dashboard() {
   return (
     <>
-      <div className="-mt-8 h-screen bg-orange-50 md:px-16 px-4 lg:px-[168px] flex flex-col lg:flex-row items-center gap-20">
-        <div className="font-extrabold opacity-90 text-4xl md:text-[120px] grid gap-y-8">
+      <div className="mt-12 lg:-mt-8 h-screen bg-orange-50 md:px-16 px-4 py-8 lg:px-[168px] flex flex-col-reverse lg:flex-row items-center gap-20">
+        <div className="font-extrabold opacity-90 text-4xl md:text-6xl lg:text-[120px] grid gap-y-8">
           <div className="leading-tight">
             <p className="">Hello,</p>
             <p>I'm Chinmay</p>
@@ -15,23 +16,16 @@ export default function Dashboard() {
             at <span className="text-blue">ShipGlobal</span>, previously at{" "}
             <span className="text-orange">NTPC</span>.
           </p>
-          <div
-            className="bg-black border-[4px] border-black rounded-lg h-[52px] w-48 cursor-pointer"
-            onClick={() =>
-              window.open(
-                "https://drive.google.com/file/d/1-laG-HJgWTzmM7_bqLNtqdte122XGjhd/view?usp=sharing",
-                "_blank"
-              )
-            }
-          >
-            <div className="relative flex items-center w-48 h-12 px-8 bg-orange-100 border border-black rounded-lg hover:bg-orange right-2 bottom-1 bg">
-              <span className="text-xl font-medium">View Resume</span>
-            </div>
-          </div>
+
+          <NavigateButton
+            url="https://drive.google.com/file/d/1-laG-HJgWTzmM7_bqLNtqdte122XGjhd/view?usp=sharing"
+            label="View Resume"
+            className="bg-orange-100 hover:bg-orange"
+          />
         </div>
-        <div className="-mt-8 bg-black border-2 border-black rounded-3xl size-88">
-          <div className="relative flex items-center right-2 border border-black bottom-2 size-[348px] bg bg-red-400 rounded-3xl">
-            <img src={HERO} className="relative bottom-3" />
+        <div className="mt-20 bg-black border-2 border-black lg:-mt-8 rounded-3xl size-60 lg:size-88">
+          <div className="relative flex items-center bg-red-400 border border-black size-60 lg:size-88 right-2 bottom-2 bg rounded-3xl">
+            <img src={HERO} />
           </div>
         </div>
       </div>

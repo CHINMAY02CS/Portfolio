@@ -7,7 +7,9 @@ export default function Layout() {
     <>
       <Header />
       <div className="mt-15 font-poppins">
-        <Outlet />
+        <div>
+          <Outlet />
+        </div>
       </div>
       <Footer />
     </>

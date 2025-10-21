@@ -33,7 +33,7 @@ interface NavigateButtonProps {
   className?: string;
 }
 
-function NavigateButton({
+export function NavigateButton({
   url,
   label,
   className = "",
