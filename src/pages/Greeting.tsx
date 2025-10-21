@@ -1,10 +1,12 @@
 export default function Greeting() {
   return (
     <>
-      <div className="flex items-center h-[90vh]">
-        <div className="md:px-16 px-4 lg:px-[168px] lg:py-24 md:max-w-5xl mx-auto">
+      <div className="flex items-center min-h-screen">
+        <div className="md:px-16 px-14 lg:px-[168px] py-16 lg:py-24 md:max-w-5xl mx-auto">
           <p>Nice to meet you</p>
-          <p className="mt-2 text-5xl font-extrabold">I'm Chinmay Singh</p>
+          <p className="mt-2 text-2xl font-extrabold md:text-3xl lg:text-5xl">
+            I'm Chinmay Singh
+          </p>
           {/* <p className="mt-2">I work as a Frontend Developer ( SDE I ).</p> */}
           <div className="grid opacity-90 gap-y-8">
             <div className="grid gap-6 mt-4 text-xl font-normal leading-normal text-black opacity-85">
