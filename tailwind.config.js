@@ -63,6 +63,14 @@ module.exports = {
           DEFAULT: "#DD1717",
           400: "#FE8277",
         },
+        green: {
+          DEFAULT: "#007A48",
+          400: "#43c7ac",
+        },
+        purple: {
+          DEFAULT: "#6840C4",
+          400: "#9A64FF",
+        },
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",

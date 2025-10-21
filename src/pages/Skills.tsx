@@ -1,3 +1,7 @@
+import ONE from "@/assets/ONE.png";
+import TWO from "@/assets/TWO.png";
+import THREE from "@/assets/THREE.png";
+
 export default function Skills() {
   return (
     <div className="h-screen bg-orange-50 md:px-16 px-4 font-poppins lg:px-[168px] md:py-24 gap-20">
@@ -61,21 +65,27 @@ export default function Skills() {
 function CardOneImage() {
   return (
     <div className="bg-black border-[4px] border-black rounded-lg h-16 w-24">
-      <div className="relative flex items-center h-16 px-8 bg-red-400 border border-black rounded-lg w-24 right-1.5 bottom-1.5 bg"></div>
+      <div className="relative flex items-center h-16 pl-2 bg-red-400 border border-black rounded-lg w-24 right-1.5 bottom-1.5 bg">
+        <img src={ONE} alt="" className="w-20 h-12" />
+      </div>
     </div>
   );
 }
 function CardTwoImage() {
   return (
     <div className="bg-black border-[4px] border-black rounded-lg h-16 w-24">
-      <div className="relative flex items-center h-16 px-8 bg-green border border-black rounded-lg w-24 right-1.5 bottom-1.5 bg"></div>
+      <div className="relative flex items-center h-16 bg-green-400 border border-black rounded-lg w-24 right-1.5 bottom-1.5 bg">
+        <img src={TWO} alt="" className="w-16 h-12 mx-auto" />
+      </div>
     </div>
   );
 }
 function CardThreeImage() {
   return (
     <div className="bg-black border-[4px] border-black rounded-lg h-16 w-24">
-      <div className="relative flex items-center h-16 px-8 bg-purple border border-black rounded-lg w-24 right-1.5 bottom-1.5 bg"></div>
+      <div className="relative flex items-center h-16 bg-purple-400 border border-black rounded-lg w-24 right-1.5 bottom-1.5 bg">
+        <img src={THREE} alt="" className="w-16 h-12 mx-auto" />
+      </div>
     </div>
   );
 }

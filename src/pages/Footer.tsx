@@ -13,7 +13,7 @@ export default function Footer() {
           className="bg-black border-[4px] border-black rounded-lg h-15 w-48 cursor-pointer"
           onClick={() =>
             window.open(
-              "https://drive.google.com/file/d/1vFdIZOESwYcur72mXRp7WAn_1NkE4krV/view?usp=sharing",
+              "https://drive.google.com/file/d/1-laG-HJgWTzmM7_bqLNtqdte122XGjhd/view?usp=sharing",
               "_blank"
             )
           }

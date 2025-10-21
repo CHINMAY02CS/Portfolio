@@ -406,67 +406,6 @@ export default function FeaturedProjects() {
             </Dialog>
           </div>
         </div>
-        <p className="mt-2 text-5xl font-extrabold text-center">
-          Other Projects
-          <div className="grid gap-16 mt-24 gap-y-32 md:grid-cols-2">
-            <div className="flex flex-col gap-6 md:grid-cols-2">
-              <img src={FRANCHISE} alt="" className="h-76 w-136" />
-              <div className="flex flex-col max-w-lg gap-4 text-base font-light leading-relaxed text-left">
-                <p className="text-2xl font-medium">
-                  ShipGlobal Portal for e-commerce exporters
-                </p>
-                <p className="text-lg">
-                  A user-centric design that resulted in a 60% reduction in
-                  support tickets, demonstrating a significant improvement in
-                  vendor satisfaction and operational cost savings
-                </p>
-                <p className="font-medium underline hover:text-xl">View</p>
-              </div>
-            </div>
-            <div className="flex flex-col gap-6 md:grid-cols-2">
-              <img src={FRANCHISE} alt="" className="h-76 w-136" />
-              <div className="flex flex-col max-w-lg gap-4 text-base font-light leading-relaxed text-left">
-                <p className="text-2xl font-medium">
-                  ShipGlobal Portal for e-commerce exporters
-                </p>
-                <p className="text-lg">
-                  A user-centric design that resulted in a 60% reduction in
-                  support tickets, demonstrating a significant improvement in
-                  vendor satisfaction and operational cost savings
-                </p>
-                <p className="font-medium underline hover:text-xl">View</p>
-              </div>
-            </div>
-            <div className="flex flex-col gap-6 md:grid-cols-2">
-              <img src={FRANCHISE} alt="" className="h-76 w-136" />
-              <div className="flex flex-col max-w-lg gap-4 text-base font-light leading-relaxed text-left">
-                <p className="text-2xl font-medium">
-                  ShipGlobal Portal for e-commerce exporters
-                </p>
-                <p className="text-lg">
-                  A user-centric design that resulted in a 60% reduction in
-                  support tickets, demonstrating a significant improvement in
-                  vendor satisfaction and operational cost savings
-                </p>
-                <p className="font-medium underline hover:text-xl">View</p>
-              </div>
-            </div>
-            <div className="flex flex-col gap-6 md:grid-cols-2">
-              <img src={FRANCHISE} alt="" className="h-76 w-136" />
-              <div className="flex flex-col max-w-lg gap-4 text-base font-light leading-relaxed text-left">
-                <p className="text-2xl font-medium">
-                  ShipGlobal Portal for e-commerce exporters
-                </p>
-                <p className="text-lg">
-                  A user-centric design that resulted in a 60% reduction in
-                  support tickets, demonstrating a significant improvement in
-                  vendor satisfaction and operational cost savings
-                </p>
-                <p className="font-medium underline hover:text-xl">View</p>
-              </div>
-            </div>
-          </div>
-        </p>
       </div>
     </>
   );
